@@ -1,3 +1,4 @@
+filename := "demo"
 # List available commands
 list: 
  - just --list
@@ -12,8 +13,8 @@ latex:
 
 # Build PDF from LaTeX source files
 pdf:
-  - cd docs/_latex/dist/ && pdflatex demo.tex
-  - cp docs/_latex/dist/demo.pdf .
+  - cd docs/_latex/dist/ && pdflatex {{filename}}.tex
+  - cp docs/_latex/dist/{{filename}}.pdf .
 
 # Delete temporary files  
 clean:
@@ -22,4 +23,5 @@ clean:
 
 # Publish documentation to Github Pages 
 publish:
-  - mudkip build --update-gh-pages
+  - mudkip build
+  - ghp-import -pfn docs/_build/dist

@@ -21,18 +21,33 @@ Create a PDF with Cyrillic letters via Sphinx and pdflatex
 - `start.sh` installs latex and other dependencies
 - `just pdf` invokes PDF build, it is an alias for `pdflatex demo.tex`
 
-3. Avoid errors with Cyrillic characters
+3. Avoid errors with Cyrillic characters (mostly fixed):
 
-4. Make PDF look sane
+- [ ] avoid unnecessary installations in `setup.sh`
+
+4. Make PDF look sane:
+
+- [ ] generate TOC
+- [ ] glossary is not a numbered chapter
+- [ ] blank pages
+
+5. PDF customisation:
+
+- [ ] watermark
+- [ ] "issued to" footer
+
+6. Build PDF in a CI
 
 ## Non-goals
 
-- Build container with latex installed
-- Automate PDF creation (e.g. in Github Actions)
+- Codespaces container with latex installed
 - Switch to MyST index.md
 - [x] Configure VS Code for TOML viewing
 - Add .mp4 to latex
 
 ## Failure points
 
-- `pdflatex` will fail here after encountering Cyrillic letters (точки отказа), очень проблемная буква: `ё`, `Ё`.
+1. `pdflatex` can fail here after encountering Cyrillic letters:
+
+  - это точка отказа;
+  - очень проблемная буква: `ё`/`Ё`.
