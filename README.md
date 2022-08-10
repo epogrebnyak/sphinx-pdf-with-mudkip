@@ -1,32 +1,36 @@
 # sphinx-pdf-with-mudkip
 
-Sandbox repo to create a PDF with Sphinx (not that easy!)
+Create a PDF with Cyrillic letters via Sphinx and pdflatex
 
-## Repo goals
+## How to use
 
-Manage Sphinx project with [mudkip](https://github.com/vberlier/mudkip):
+1. Оpen project in Github Codespaces or other linux environment
+2. Run `./start.sh` to install dependencies
+3. `just latex` creates latex files (including `demo.tex`)
+4. `just pdf` creates [`demo.pdf`](https://github.com/epogrebnyak/sphinx-pdf-with-mudkip/blob/main/demo.pdf)
 
-- [x] use `[mudkip.override]` in `mudkip.toml` instead of `conf.py`
-- [x] make latex with `mudkit build --preset latex --output-dir docs/_latex`
+## Development notes
 
-Create a PDF in Github Codespaces:
+1. Sphinx project managed with [mudkip](https://github.com/vberlier/mudkip):
+  - `[mudkip.override]` in `mudkip.toml` used instead of `conf.py`
+  - `just latex` in an alias for `mudkit build --preset latex --output-dir docs/_latex`
 
-- [x] bash script to install latex and other dependencies `start.sh`
-- [x] script to invoke PDF build: `just pdf` (`pdflatex demo.tex`)
-- [ ] **TODO: build pdf with Cyrillic characters**
+2. PDF created in Github Codespaces:
+  - `start.sh` installs latex and other dependencies 
+  - `just pdf` invokes PDF build, it is an alias for `pdflatex demo.tex`
+  
+3. Avoid errors with Cyrillic characters
 
-Result: [demo.pdf](https://github.com/epogrebnyak/sphinx-pdf-with-mudkip/blob/main/demo.pdf)
+4. Make PDF look sane
+  
+## Non-goals
 
-Non-goals:
-
-- [ ] Build container with latex installed
-- [ ] Automate PDF creation (e.g. in Github Actions)
-- [ ] Switch to MyST index.md
-- [ ] Configure VS Code for TOML viewing
-- [ ] Add .mp4 to latex
+- Build container with latex installed
+- Automate PDF creation (e.g. in Github Actions)
+- Switch to MyST index.md
+- [x] Configure VS Code for TOML viewing
+- Add .mp4 to latex
 
 ## Failure points
 
-1. `pdflatex` will fail here after encountering Cyrillic letter:
-   - `Точки отказа`
-   - Очень проблемная буква: `ё`, `Ё`
+- `pdflatex` will fail here after encountering Cyrillic letters (точки отказа), очень проблемная буква: `ё`, `Ё`.
