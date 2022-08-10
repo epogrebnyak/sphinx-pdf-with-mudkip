@@ -1,5 +1,5 @@
-sphinx-pdf-with-mudkit
-======================
+Try Sphinx, Mudkip and pdflatex together!
+=========================================
 
 .. toctree::
    :maxdepth: 2

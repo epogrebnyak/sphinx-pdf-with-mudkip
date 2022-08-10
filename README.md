@@ -1,6 +1,6 @@
-# Sphinx with Mudkip - Introduction
+# Sphinx with Mudkip 
 
-Create a PDF with Cyrillic letters via Sphinx and pdflatex
+Create a PDF with Cyrillic letters via Sphinx and pdflatex.
 
 ## How to use
 
@@ -40,13 +40,17 @@ Create a PDF with Cyrillic letters via Sphinx and pdflatex
 
 6. Build PDF in a CI
 
+7. Side effects
+
+- [x] Configure VS Code for TOML viewing - use [Even better TOML](https://marketplace.visualstudio.com/items?itemName=tamasfe.even-better-toml)
+
 ## Non-goals
 
 - Codespaces container with latex installed
 - Switch to MyST index.md
-- [x] Configure VS Code for TOML viewing
 - Add .mp4 to latex
 - Link PDF to theme
+- lightweight PDF creation (rhinotype and weasyprint)
 
 ## Failure points
 
