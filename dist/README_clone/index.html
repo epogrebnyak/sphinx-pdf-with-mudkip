@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>sphinx-pdf-with-mudkip &mdash; документация Sphinx + Mudkip + Codespaces = PDF </title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/mystnb.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/togglebutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+        <script src="../_static/translations.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="../genindex/" />
+    <link rel="search" title="Поиск" href="../search/" />
+    <link rel="next" title="Почему настроить LaTeX это такая жесть?" href="../sphinx/" />
+    <link rel="prev" title="sphinx-pdf-with-mudkit" href="../" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../" class="icon icon-home"> Sphinx + Mudkip + Codespaces = PDF
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Поиск в документации" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">sphinx-pdf-with-mudkip</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-use">How to use</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#development-notes">Development notes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#non-goals">Non-goals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#failure-points">Failure points</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../sphinx/">Почему настроить LaTeX это такая жесть?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/">Глоссарий</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Меню навигации для мобильных устройств" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">Sphinx + Mudkip + Codespaces = PDF</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Навигация по страницам">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home"></a> &raquo;</li>
+      <li>sphinx-pdf-with-mudkip</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/README_clone.md.txt" rel="nofollow"> Просмотреть исходный код страницы</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="sphinx-pdf-with-mudkip">
+<h1>sphinx-pdf-with-mudkip<a class="headerlink" href="#sphinx-pdf-with-mudkip" title="Permalink to this heading"></a></h1>
+<p>Create a PDF with Cyrillic letters via Sphinx and pdflatex</p>
+<section id="how-to-use">
+<h2>How to use<a class="headerlink" href="#how-to-use" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Оpen project in Github Codespaces or other linux environment</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">./start.sh</span></code> to install dependencies</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">just</span> <span class="pre">latex</span></code> creates latex files (including <code class="docutils literal notranslate"><span class="pre">demo.tex</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">just</span> <span class="pre">pdf</span></code> creates <a class="reference external" href="https://github.com/epogrebnyak/sphinx-pdf-with-mudkip/blob/main/demo.pdf"><code class="docutils literal notranslate"><span class="pre">demo.pdf</span></code></a></p></li>
+</ol>
+</section>
+<section id="development-notes">
+<h2>Development notes<a class="headerlink" href="#development-notes" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Sphinx project managed with <a class="reference external" href="https://github.com/vberlier/mudkip">mudkip</a>:</p></li>
+</ol>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">[mudkip.override]</span></code> in <code class="docutils literal notranslate"><span class="pre">mudkip.toml</span></code> used instead of <code class="docutils literal notranslate"><span class="pre">conf.py</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">just</span> <span class="pre">latex</span></code> in an alias for <code class="docutils literal notranslate"><span class="pre">mudkit</span> <span class="pre">build</span> <span class="pre">--preset</span> <span class="pre">latex</span> <span class="pre">--output-dir</span> <span class="pre">docs/_latex</span></code></p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p>PDF created in Github Codespaces:</p></li>
+</ol>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">start.sh</span></code> installs latex and other dependencies</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">just</span> <span class="pre">pdf</span></code> invokes PDF build, it is an alias for <code class="docutils literal notranslate"><span class="pre">pdflatex</span> <span class="pre">demo.tex</span></code></p></li>
+</ul>
+<ol class="arabic simple" start="3">
+<li><p>Avoid errors with Cyrillic characters</p></li>
+<li><p>Make PDF look sane</p></li>
+</ol>
+</section>
+<section id="non-goals">
+<h2>Non-goals<a class="headerlink" href="#non-goals" title="Permalink to this heading"></a></h2>
+<ul class="contains-task-list simple">
+<li><p>Build container with latex installed</p></li>
+<li><p>Automate PDF creation (e.g. in Github Actions)</p></li>
+<li><p>Switch to MyST index.md</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Configure VS Code for TOML viewing</p></li>
+<li><p>Add .mp4 to latex</p></li>
+</ul>
+</section>
+<section id="failure-points">
+<h2>Failure points<a class="headerlink" href="#failure-points" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pdflatex</span></code> will fail here after encountering Cyrillic letters (точки отказа), очень проблемная буква: <code class="docutils literal notranslate"><span class="pre">ё</span></code>, <code class="docutils literal notranslate"><span class="pre">Ё</span></code>.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Нижняя область">
+        <a href="../" class="btn btn-neutral float-left" title="sphinx-pdf-with-mudkit" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
+        <a href="../sphinx/" class="btn btn-neutral float-right" title="Почему настроить LaTeX это такая жесть?" accesskey="n" rel="next">Следующая <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022.</p>
+  </div>
+
+  Собрано при помощи <a href="https://www.sphinx-doc.org/">Sphinx</a> с использованием
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">темы,</a>
+    предоставленной <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
