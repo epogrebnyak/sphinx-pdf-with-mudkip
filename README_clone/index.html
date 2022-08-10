@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>sphinx-pdf-with-mudkip &mdash; документация Sphinx + Mudkip + Codespaces = PDF </title>
+  <title>Sphinx with Mudkip - Introduction &mdash; документация Sphinx + pdflatex + Codespaces = PDF </title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/mystnb.css" type="text/css" />
@@ -39,7 +39,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../" class="icon icon-home"> Sphinx + Mudkip + Codespaces = PDF
+            <a href="../" class="icon icon-home"> Sphinx + pdflatex + Codespaces = PDF
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
@@ -50,7 +50,7 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
               <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">sphinx-pdf-with-mudkip</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Sphinx with Mudkip - Introduction</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#how-to-use">How to use</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#development-notes">Development notes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#non-goals">Non-goals</a></li>
@@ -67,7 +67,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Меню навигации для мобильных устройств" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../">Sphinx + Mudkip + Codespaces = PDF</a>
+          <a href="../">Sphinx + pdflatex + Codespaces = PDF</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -75,7 +75,7 @@
           <div role="navigation" aria-label="Навигация по страницам">
   <ul class="wy-breadcrumbs">
       <li><a href="../" class="icon icon-home"></a> &raquo;</li>
-      <li>sphinx-pdf-with-mudkip</li>
+      <li>Sphinx with Mudkip - Introduction</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/README_clone.md.txt" rel="nofollow"> Просмотреть исходный код страницы</a>
       </li>
@@ -85,8 +85,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="sphinx-pdf-with-mudkip">
-<h1>sphinx-pdf-with-mudkip<a class="headerlink" href="#sphinx-pdf-with-mudkip" title="Permalink to this heading"></a></h1>
+  <section id="sphinx-with-mudkip-introduction">
+<h1>Sphinx with Mudkip - Introduction<a class="headerlink" href="#sphinx-with-mudkip-introduction" title="Permalink to this heading"></a></h1>
 <p>Create a PDF with Cyrillic letters via Sphinx and pdflatex</p>
 <section id="how-to-use">
 <h2>How to use<a class="headerlink" href="#how-to-use" title="Permalink to this heading"></a></h2>
@@ -95,6 +95,7 @@
 <li><p>Run <code class="docutils literal notranslate"><span class="pre">./start.sh</span></code> to install dependencies</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">just</span> <span class="pre">latex</span></code> creates latex files (including <code class="docutils literal notranslate"><span class="pre">demo.tex</span></code>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">just</span> <span class="pre">pdf</span></code> creates <a class="reference external" href="https://github.com/epogrebnyak/sphinx-pdf-with-mudkip/blob/main/demo.pdf"><code class="docutils literal notranslate"><span class="pre">demo.pdf</span></code></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">just</span> <span class="pre">publish</span></code> puts documentation to Github Pages</p></li>
 </ol>
 </section>
 <section id="development-notes">
@@ -114,15 +115,35 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">just</span> <span class="pre">pdf</span></code> invokes PDF build, it is an alias for <code class="docutils literal notranslate"><span class="pre">pdflatex</span> <span class="pre">demo.tex</span></code></p></li>
 </ul>
 <ol class="arabic simple" start="3">
-<li><p>Avoid errors with Cyrillic characters</p></li>
-<li><p>Make PDF look sane</p></li>
+<li><p>Avoid errors with Cyrillic characters (mostly fixed):</p></li>
+</ol>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> avoid unnecessary installations in <code class="docutils literal notranslate"><span class="pre">setup.sh</span></code></p></li>
+</ul>
+<ol class="arabic simple" start="4">
+<li><p>Make PDF look sane:</p></li>
+</ol>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> generate TOC</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> glossary is not a numbered chapter</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> blank pages</p></li>
+</ul>
+<ol class="arabic simple" start="5">
+<li><p>PDF customisation:</p></li>
+</ol>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> watermark</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> &quot;issued to&quot; footer</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> time generated</p></li>
+</ul>
+<ol class="arabic simple" start="6">
+<li><p>Build PDF in a CI</p></li>
 </ol>
 </section>
 <section id="non-goals">
 <h2>Non-goals<a class="headerlink" href="#non-goals" title="Permalink to this heading"></a></h2>
 <ul class="contains-task-list simple">
-<li><p>Build container with latex installed</p></li>
-<li><p>Automate PDF creation (e.g. in Github Actions)</p></li>
+<li><p>Codespaces container with latex installed</p></li>
 <li><p>Switch to MyST index.md</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Configure VS Code for TOML viewing</p></li>
 <li><p>Add .mp4 to latex</p></li>
@@ -130,8 +151,12 @@
 </section>
 <section id="failure-points">
 <h2>Failure points<a class="headerlink" href="#failure-points" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pdflatex</span></code> can fail here after encountering Cyrillic letters:</p></li>
+</ol>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">pdflatex</span></code> will fail here after encountering Cyrillic letters (точки отказа), очень проблемная буква: <code class="docutils literal notranslate"><span class="pre">ё</span></code>, <code class="docutils literal notranslate"><span class="pre">Ё</span></code>.</p></li>
+<li><p>это точка отказа;</p></li>
+<li><p>очень проблемная буква: <code class="docutils literal notranslate"><span class="pre">ё</span></code>/<code class="docutils literal notranslate"><span class="pre">Ё</span></code>.</p></li>
 </ul>
 </section>
 </section>
