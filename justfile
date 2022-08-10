@@ -14,3 +14,8 @@ latex:
 pdf:
   - cd docs/_latex/dist/ && pdflatex demo.tex
   - cp docs/_latex/dist/demo.pdf .
+
+# Delete temporary files  
+clean:
+  - mudkip clean
+  - rm -rf docs/_latex
