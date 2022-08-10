@@ -13,3 +13,6 @@ sudo apt-get install texlive-fonts-extra
 
 # Install the extra packages
 sudo apt-get install texlive-latex-extra
+
+# Hope it installs Russian for babel
+sudo apt-get install texlive-lang-cyrillic 
