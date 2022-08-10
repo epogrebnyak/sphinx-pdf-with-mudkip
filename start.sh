@@ -3,6 +3,7 @@
 #          as in https://aka.ms/configure-codespace
 conda install -c conda-forge just
 pip install update git+https://github.com/vberlier/mudkip.git
+pip install ghp-import
 
 # Install tons of latex:
 sudo apt-get install texlive-latex-base

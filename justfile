@@ -19,3 +19,7 @@ pdf:
 clean:
   - mudkip clean
   - rm -rf docs/_latex
+
+# Publish documentation to Github Pages 
+publish:
+  - mudkip build --update-gh-pages

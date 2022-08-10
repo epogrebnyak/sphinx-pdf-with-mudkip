@@ -12,17 +12,19 @@ Create a PDF with Cyrillic letters via Sphinx and pdflatex
 ## Development notes
 
 1. Sphinx project managed with [mudkip](https://github.com/vberlier/mudkip):
-  - `[mudkip.override]` in `mudkip.toml` used instead of `conf.py`
-  - `just latex` in an alias for `mudkit build --preset latex --output-dir docs/_latex`
+
+- `[mudkip.override]` in `mudkip.toml` used instead of `conf.py`
+- `just latex` in an alias for `mudkit build --preset latex --output-dir docs/_latex`
 
 2. PDF created in Github Codespaces:
-  - `start.sh` installs latex and other dependencies 
-  - `just pdf` invokes PDF build, it is an alias for `pdflatex demo.tex`
-  
+
+- `start.sh` installs latex and other dependencies
+- `just pdf` invokes PDF build, it is an alias for `pdflatex demo.tex`
+
 3. Avoid errors with Cyrillic characters
 
 4. Make PDF look sane
-  
+
 ## Non-goals
 
 - Build container with latex installed
