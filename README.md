@@ -8,6 +8,7 @@ Create a PDF with Cyrillic letters via Sphinx and pdflatex
 2. Run `./start.sh` to install dependencies
 3. `just latex` creates latex files (including `demo.tex`)
 4. `just pdf` creates [`demo.pdf`](https://github.com/epogrebnyak/sphinx-pdf-with-mudkip/blob/main/demo.pdf)
+5. `just publish` puts documentation to Github Pages
 
 ## Development notes
 
