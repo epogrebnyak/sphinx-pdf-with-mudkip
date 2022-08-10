@@ -46,6 +46,7 @@ Create a PDF with Cyrillic letters via Sphinx and pdflatex
 - Switch to MyST index.md
 - [x] Configure VS Code for TOML viewing
 - Add .mp4 to latex
+- Link PDF to theme
 
 ## Failure points
 
