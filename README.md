@@ -1,4 +1,4 @@
-# sphinx-pdf-with-mudkip
+# Sphinx with Mudkip - Introduction
 
 Create a PDF with Cyrillic letters via Sphinx and pdflatex
 
@@ -36,6 +36,7 @@ Create a PDF with Cyrillic letters via Sphinx and pdflatex
 
 - [ ] watermark
 - [ ] "issued to" footer
+- [ ] time generated
 
 6. Build PDF in a CI
 
