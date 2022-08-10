@@ -15,6 +15,8 @@ Create a PDF in Github Codespaces:
 - [x] script to invoke PDF build: `just pdf` (`pdflatex demo.tex`)
 - [ ] **TODO: build pdf with Cyrillic characters**
 
+Result: [demo.pdf](demo.pdf)
+
 Non-goals:
 
 - [ ] Build container with latex installed
