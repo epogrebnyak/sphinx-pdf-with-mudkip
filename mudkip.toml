@@ -1,0 +1,9 @@
+[mudkip]
+title = "Sphinx + Mudkip + Codespaces = PDF"
+preset = "rtd"
+
+# this is a replacement of conf.py
+[mudkip.override]
+myst_enable_extensions = ["replacements", "tasklist"]
+latex_documents = [["index", "demo.tex", "Demo of PDF Generation", "Author A. Name", "manual"]]
+# html_static_path = ["_static"]
