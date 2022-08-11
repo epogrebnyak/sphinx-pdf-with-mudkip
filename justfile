@@ -1,4 +1,5 @@
 filename := "demo"
+
 # List available commands
 list: 
  - just --list
@@ -6,6 +7,14 @@ list:
 # Prettify markdown files
 lint:
   - npx prettier . --write
+
+# Check documentation for errors
+check:
+  - mudkip build --check
+
+# Build HTML documentation
+build:
+  - mudkip build
 
 # Create LaTeX source files
 latex:
